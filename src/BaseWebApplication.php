@@ -9,12 +9,12 @@ use Thruster\Component\HttpMiddleware\RequestMiddlewaresAwareTrait;
 use Thruster\Component\HttpRouter\Router;
 
 /**
- * Class BaseApplication
+ * Class BaseWebApplication
  *
  * @package Thruster\Component\WebApplication
  * @author  Aurimas Niekis <aurimas@niekis.lt>
  */
-abstract class BaseApplication implements ApplicationInterface
+abstract class BaseWebApplication implements WebApplicationInterface
 {
     use RequestMiddlewaresAwareTrait;
 

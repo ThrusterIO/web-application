@@ -8,12 +8,12 @@ use Thruster\Component\HttpRouter\RouteHandlerInterface;
 use Thruster\Component\HttpRouter\RouteProviderInterface;
 
 /**
- * Interface ApplicationInterface
+ * Interface WebApplicationInterface
  *
  * @package Thruster\Component\WebApplication
  * @author  Aurimas Niekis <aurimas@niekis.lt>
  */
-interface ApplicationInterface extends RouteProviderInterface, RouteHandlerInterface
+interface WebApplicationInterface extends RouteProviderInterface, RouteHandlerInterface
 {
     /**
      * @param ServerRequestInterface $request
