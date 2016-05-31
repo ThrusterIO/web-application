@@ -13,9 +13,10 @@
     ],
     "require": {
         "php": ">=7.0",
-        "thruster/http-router": "^1.0",
+        "thruster/http-router": "^1.1",
         "thruster/http-middleware": "^1.1",
-        "thruster/http-message": "^1.1"
+        "thruster/http-message": "^1.1",
+        "thruster/promise": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.1"
