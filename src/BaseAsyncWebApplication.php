@@ -61,7 +61,7 @@ abstract class BaseAsyncWebApplication implements AsyncWebApplicationInterface
 
         $deferred = new Deferred();
 
-        $this->getRequestMiddlewares()->getPreMiddlewares()->__invoke(
+        $response = $this->getRequestMiddlewares()->getPreMiddlewares()->__invoke(
             $request,
             $response,
             function (ServerRequestInterface $request, ResponseInterface $response) use ($deferred) {
@@ -76,6 +76,10 @@ abstract class BaseAsyncWebApplication implements AsyncWebApplicationInterface
                 return $response;
             }
         );
+
+        if (null !== $response) {
+            $deferred->resolve($response);
+        }
 
         return $deferred->promise();
     }
